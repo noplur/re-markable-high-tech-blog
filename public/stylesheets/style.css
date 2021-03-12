@@ -53,6 +53,7 @@ header nav ul li a:hover {
     box-shadow: 5px 10px rgb(153, 153, 102, .6);
     margin-left: 5%;
     margin-bottom: 2%;
+    margin-top: 2%;
 }
 /* Styling for main section */
 .post {

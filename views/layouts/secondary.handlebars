@@ -18,47 +18,38 @@
 <!-- start of head section -->
 <body>
 <header>
-<nav>
-    <!-- Unordered list element -->
-    <ul>
-        <!-- List item element -->
-        <li>
-            <!-- Anchor element-->
-            <a class="link" href="/">Home</a>
-        </li>
-        <li>
-            <a class="link" href="/dashboard">Dashboard</a>
-        </li>
-        <li>
-            {{#if loggedIn}}
-                    <a class="link" href="/" id="logout">Logout</a>
-        </li>
-        <li>
-            {{else}}
-                    <a class="link" href="/login">Login</a>
-            {{/if}}
-        </li>
-    </ul>
-</nav>
+    <nav>
+        <!-- Unordered list element -->
+        <ul>
+            <!-- List item element -->
+            <li>
+                <!-- Anchor element-->
+                <a class="link" href="/">Home</a>
+            </li>
+            <li>
+                <a class="link" href="/dashboard">Dashboard</a>
+            </li>
+            <li>
+                {{#if loggedIn}}
+                        <a class="link" href="/" id="logout">Logout</a>
+            </li>
+                {{/if}}
+        </ul>
+    </nav>
 <br />
 <br />
 
-<section class="intro">The Re-Markable High-Tech Blog</section>
+<section class="intro">Your Dashboard</section>
 
 <!-- end of intro section -->
 </header>
 
-{{{body}}}
-
 <!-- start of footer section -->
 
 <footer>
-    <section class="footer"></section>
+    <section class="footer">
+        <button type="submit" class="new-post">+ New Post</button>
+    </section>
 </footer>
 
-<!-- end of footer section -->
 </body>
-
-{{#if loggedIn}}
-<script src="/javascript/logout.js"></script>
-{{/if}}
