@@ -22,20 +22,14 @@ User.init(
       },
       username: {
         type: DataTypes.STRING,
-        allowNull: false
-      },
-      email: {
-        type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
-        validate: {
-          isEmail: true
-        }
+        unique: true
       },
       password: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
+          // this means the password must be at least four characters long
           len: [4]
         }
       }
