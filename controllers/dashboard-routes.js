@@ -89,9 +89,11 @@ router.get('/', withAuth, (req, res) => {
   });
 
 router.get('/new', (req, res) => {
-    res.render('new-post', {
-      layout: "secondary"
-    })
-});
+    res.render('new-post'
+    // , {
+      // layout: "secondary"
+    // })
+)}
+);
   
   module.exports = router;
