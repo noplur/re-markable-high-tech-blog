@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
       attributes: [
         'id',
         'title',
-        'post_url',
+        'content',
         'created_at'
       ],
       include: [
@@ -52,7 +52,7 @@ Post.findOne({
   attributes: [
     'id',
     'title',
-    'post_url',
+    'content',
     'created_at'
   ],
   include: [

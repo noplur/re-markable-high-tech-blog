@@ -14,7 +14,7 @@ router.get('/', withAuth, (req, res) => {
       attributes: [
         'id',
         'title',
-        'post_url',
+        'content',
         'created_at'
       ],
       include: [
@@ -49,11 +49,11 @@ router.get('/', withAuth, (req, res) => {
         where: {
             id: req.params.id
         },
-      attributes: [
-        'id',
-        'title',
-        'post_url',
-        'created_at'
+        attributes: [
+          'id',
+          'title',
+          'content',
+          'created_at'
       ],
       include: [
         {
