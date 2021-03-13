@@ -34,7 +34,8 @@ router.get('/', withAuth, (req, res) => {
     })
       .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true }));
-        res.render('dashboard', { layout: "secondary", posts, loggedIn: true });
+         res.render('dashboard', { posts, loggedIn: true });
+        // res.render('dashboard', { layout: "secondary", posts, loggedIn: true });
       })
       .catch(err => {
         console.log(err);
@@ -73,12 +74,13 @@ router.get('/', withAuth, (req, res) => {
       .then(dbPostData => {
         if (dbPostData) {
           const post = dbPostData.get({ plain: true });
+          res.render('edit-post', { post, loggedIn: true });
           
-          res.render('edit-post', {
-            layout: "secondary",
-            post,
-            loggedIn: true
-          });
+          // res.render('edit-post', {
+          //   layout: "secondary",
+          //   post,
+          //   loggedIn: true
+          // });
         } else {
           res.status(404).end();
         }
@@ -88,12 +90,16 @@ router.get('/', withAuth, (req, res) => {
       });
   });
 
+// router.get('/new', (req, res) => {
+//     res.render('new-post'
+//     , {
+//       layout: "new-post-secondary"
+//     })
+// });
+
 router.get('/new', (req, res) => {
-    res.render('new-post'
-    // , {
-      // layout: "secondary"
-    // })
-)}
-);
+  res.render('new-post');
+});
+
   
   module.exports = router;

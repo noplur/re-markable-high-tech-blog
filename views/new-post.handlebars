@@ -1,7 +1,25 @@
+
+{{> secondary-header post.secondary-header}}
+
 <!-- start of main section -->
 
 <main>
 {{!-- code for html for creating new post --}}
+<div class="create-new-post">
+  {{#each this}}
+    <div class="card">
+        <h3 class="card-header"></h3>
+        <section class="create-new-post card-body border border-dark">
+            <div class="text">
+                {{comment_text}}
+            </div>
+            <div class="meta">
+                <br />-{{user.username}}, {{format_date created_at}}
+            </div>
+        </section>
+    </div>
+  {{/each}}
+</div>
 </main>
 
 
