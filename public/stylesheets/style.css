@@ -150,3 +150,10 @@ a:hover {
     color: lightgrey;
     text-decoration: none;
 }
+.submit-btn {
+    margin-bottom: 4%;
+}
+.submit-btn:hover {
+    color: lightgrey;
+    text-decoration: none;
+}

@@ -1,32 +1,21 @@
 <!-- start of main section -->
 <main>
-    {{> post-info post}}
+{{> post-info post}}
 
-    {{#if loggedIn}}
+{{#if loggedIn}}
     <section class ="post">
         <div class="card row row-cols-1 row-cols-md-1 d-flex">
             <div class="card-header">
             </div>
-            <form id="comment-form" class="card-body border border-dark">
-
-                <label class="form-label" for="comment">Comment</label><br />
-          <textarea  name="comment" type="text" autofocus="true" class="form-input-comment"></textarea>
-           <button type="submit" class="btn">Submit</button>
-        
-                        {{!-- figure out link at h ref for line below --}}
-          {{!-- <button type="submit" class="comment-btn comment-submit-link"><a href="/posts-comments">Submit</a></button> --}}
-          
-          {{!-- <button type="submit" class="btn">Submit</button> --}}
-          
-          {{!-- <button type="submit" class="comment-btn">Submit</button> 
-          <a class="comment-submit-link" href="/dashboard/comments"></a> --}}
-        </form>
+                <form id="comment-form" class="card-body border border-dark">
+                    <label class="form-label" for="comment">Comment</label><br />
+                        <textarea  name="comment" type="text" autofocus="true" class="form-input-comment"></textarea>
+                            <button type="submit" class="btn submit-btn">Submit</button>
+                </form>
         </div>
-        {{/if}}
+{{/if}}
 
-        {{> comments post.comments}}
-
-        
+{{> comments post.comments}}
     </section>
 </main>
     
