@@ -15,6 +15,17 @@
 
 <!-- end of head section -->
 
+{{!-- maybe I don't need this: --}}
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+    {{#each posts as |post|}}
+      {{> dashboard-postinfo post}}
+    {{/each}}
+
+</section>
+{{/if}}
+
 <!-- start of head section -->
 <body>
 <header>
