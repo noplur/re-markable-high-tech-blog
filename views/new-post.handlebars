@@ -3,25 +3,32 @@
 
 <!-- start of main section -->
 
-<main>
 {{!-- code for html for creating new post --}}
-<div class="create-new-post">
-  {{#each this}}
-    <div class="card">
-        <h3 class="card-header"></h3>
-        <section class="create-new-post card-body border border-dark">
-            <div class="text">
-                {{comment_text}}
-            </div>
-            <div class="meta">
-                <br />-{{user.username}}, {{format_date created_at}}
-            </div>
-        </section>
+<main>
+    <div class="create-new-post card card row row-cols-1 row-cols-md-1 d-flex">
+        <h3 class="card-header">Create New Post</h3>
+        <form id="new-post-form" class="card-body border border-dark">
+          <label class="form-label" for="title">Title</label><br />
+          <textarea name="title" type="text" autofocus="true" class="form-input" /></textarea><br />
+  
+          <label class="form-label" for="content">Content</label> <br />
+          <textarea name="content" type="text" autofocus="true" class="form-input-create-new-post" /></textarea><br />
+  
+    
+          <button type="create" class="btn"><a href="/dashboard">Create</a></button>
+        </form>
     </div>
-  {{/each}}
-</div>
 </main>
 
+<!-- start of footer section -->
+
+<footer>
+    <section class="footer">
+        <button type="submit" class="new-post"><a href="/dashboard/new">+ New Post</a></button>
+    </section>
+</footer>
+
+</body>
 
 <!-- end of main section -->
 
