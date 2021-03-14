@@ -1,10 +1,8 @@
 
 {{> secondary-header post.secondary-header}}
 
-{{!-- maybe I don't need this: --}}
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
     {{#each posts as |post|}}
       {{> user-posts post}}
     {{/each}}
